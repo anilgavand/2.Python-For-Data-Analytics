@@ -1,0 +1,63 @@
+# salary Slip Calculation Based on tht CTC:Cost to Company
+print("........................................................................................")
+Name=input("Name of Employee :")
+Total_CTC_offered=float(input("Enter CTC Offered by Organization in Lakh Per Year i.e LPA: "))
+Per_month_CTC=float(Total_CTC_offered/12)
+print("-------------------------------------------------------------------------------------")
+print("Earning Componant of Salary")
+print("-------------------------------------------------------------------------------------")
+Basic=Per_month_CTC*(50/100)
+HRA=Per_month_CTC*(37.35/100)
+LTA=Per_month_CTC*(7.50/100)
+Education_Allowance=Per_month_CTC*(0.27/100)
+Other_Allowance=Per_month_CTC*0
+Total_Earning_Gross=Basic+HRA+LTA+Education_Allowance+Other_Allowance
+Providant_Fund_employee=Per_month_CTC*(2.47/100) #Here we chose P.F 1800 Standerd
+Tax=Per_month_CTC*(0.27/100)
+Canteen=Per_month_CTC*(0.83/100)
+Transport=Per_month_CTC*(1.47/100)
+Total_deduction=Providant_Fund_employee+Tax+Canteen+Transport
+print("Name of Employee :",Name)
+print("Welcome to the Rovema Gmbh")
+print("Total CTC offered:",Total_CTC_offered)
+print("Per Month CTC offered:",Per_month_CTC)
+print("Basic Amount:",Basic)
+print("HRA is :",HRA)
+print("LTA is :",LTA)
+print("Educational Allowance is :",Education_Allowance)
+print("Other Allowances:",Other_Allowance)
+print("........................................................................................")
+print("Total Earning is :",Total_Earning_Gross)
+print("........................................................................................")
+print("........................................................................................")
+print("Total Fixed deductions as per followings from employee: ")
+print("........................................................................................")
+print("Providant Fund is :",Providant_Fund_employee)
+print("Tax amount is :",Tax)
+print("Canteen Amount is :",Canteen)
+print("Tranport Amount is :",Transport)
+print("........................................................................................")
+print("Total Fixed deductions as per followings from employee: ",Total_deduction)
+print("........................................................................................")
+print("........................................................................................")
+print("Total Addition from employer: ")
+print("........................................................................................")
+Providant_Fund_employer=Basic*(4.94/100) #Here we chose P.F 1800 Standerd
+print("Providant Fund by Employeer :",Providant_Fund_employer)
+Gratuity_employeer=Basic*(2.74/100)
+print("Gratuity is: ",Gratuity_employeer)
+Insurance_Benefit_employer=Basic*(2.07/100)
+print("Insurance Benifit is :",Insurance_Benefit_employer)
+Total_Addition_By_employer=Providant_Fund_employer+Gratuity_employeer+Insurance_Benefit_employer
+print("........................................................................................")
+print("Total Addition from emplyer: ",Total_Addition_By_employer)
+net_pay=(Per_month_CTC-Total_deduction-Total_Addition_By_employer)
+print("........................................................................................")
+print("Net salary: ",net_pay)
+print("........................................................................................")
+Total_Deduction_in_Percentages=100-(100*(net_pay*12))/Total_CTC_offered
+print("Total deduction in percentages on CTC: ",Total_Deduction_in_Percentages)
+print("........................................................................................")
+
+
+
